@@ -163,6 +163,8 @@ namespace QMK_Toolbox.Usb
                     return new Gd32VDfuDevice(usbDevice);
                 case BootloaderType.HalfKay:
                     return new HalfKayDevice(usbDevice);
+                case BootloaderType.Ht32Dfu:
+                    return new Ht32DfuDevice(usbDevice);
                 case BootloaderType.KiibohdDfu:
                     return new KiibohdDfuDevice(usbDevice);
                 case BootloaderType.LufaHid:
@@ -224,6 +226,12 @@ namespace QMK_Toolbox.Usb
                     if (productId == 0xDF11)
                     {
                         return BootloaderType.Stm32Dfu;
+                    }
+                    break;
+                case 0x04d9: // Holtek
+                    if (productId == 0x8010)
+                    {
+                        return BootloaderType.Ht32Dfu;
                     }
                     break;
                 case 0x1209: // pid.codes

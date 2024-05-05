@@ -10,6 +10,7 @@
         Caterina,
         Gd32VDfu,
         HalfKay,
+        Ht32Dfu,
         KiibohdDfu,
         LufaHid,
         LufaMs,
