@@ -118,6 +118,8 @@ class USBListener: BootloaderDeviceDelegate {
             return GD32VDFUDevice(usbDevice: usbDevice)
         case .halfKay:
             return HalfKayDevice(usbDevice: usbDevice)
+        case .ht32Dfu:
+            return HT32DFUDevice(usbDevice: usbDevice)
         case .kiibohdDfu:
             return KiibohdDFUDevice(usbDevice: usbDevice)
         case .lufaHid, .qmkHid:
@@ -160,6 +162,10 @@ class USBListener: BootloaderDeviceDelegate {
         case 0x0483: // STMicroelectronics
             if productID == 0xDF11 {
                 return .stm32Dfu
+            }
+        case 0x04D9: // Holtek
+            if productID == 0x8010 {
+                return .ht32Dfu
             }
         case 0x1209: // pid.codes
             if productID == 0x2302 { // Keyboardio Atreus 2 Bootloader

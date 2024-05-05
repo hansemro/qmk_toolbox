@@ -30,6 +30,7 @@ class MainViewController: NSViewController, USBListenerDelegate {
         logTextView.logInfo(" - BootloadHID (Atmel, PS2AVRGB) via bootloadHID (https://www.obdev.at/products/vusb/bootloadhid.html)")
         logTextView.logInfo(" - Caterina (Arduino, Pro Micro) via avrdude (http://nongnu.org/avrdude/)")
         logTextView.logInfo(" - HalfKay (Teensy, Ergodox EZ) via Teensy Loader (https://pjrc.com/teensy/loader_cli.html)")
+        logTextView.logInfo(" - Holtek HT32 ISP DFU via ht32-dfu-tool (https://github.com/hansemro/ht32-dfu-tool)")
         logTextView.logInfo(" - LUFA/QMK HID via hid_bootloader_cli (https://github.com/abcminiuser/lufa)")
         logTextView.logInfo(" - WB32 DFU via wb32-dfu-updater_cli (https://github.com/WestberryTech/wb32-dfu-updater)")
         logTextView.logInfo(" - LUFA Mass Storage")

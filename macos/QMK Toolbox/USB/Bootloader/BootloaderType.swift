@@ -9,6 +9,7 @@ enum BootloaderType {
     case caterina
     case gd32vDfu
     case halfKay
+    case ht32Dfu
     case kiibohdDfu
     case lufaHid
     case lufaMs
